@@ -30,6 +30,13 @@ const ImageWrapper = styled.div`
       width: ${({ width }) => width || 'fit-content'};
       height: ${({ height }) => height || 'fit-content'};
     }
+  @media (max-width: 960px) {
+    top: ${({ minTop }) => minTop || 'auto'};
+    left: ${({ minLeft }) => minLeft || 'auto'};
+    right: ${({ minRight }) => minRight || 'auto'};
+    bottom: ${({ minBottom }) => minBottom || 'auto'};
+      z-index: -1;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -37,6 +44,10 @@ const StyledImage = styled.img`
   height: 100%;
   object-fit: contain;
   animation: ${fadeInAndTransform} ease forwards;
+  @media (max-width: 960px) {
+    width: 60%;
+    height: 60%;
+    }
 `;
 
 const InteractiveImage = ({ src, alt = 'image', ...styleProps  }) => {

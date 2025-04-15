@@ -10,9 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "motion": "^12.6.5",
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.12.7",
+    "motion": "^12.7.3",
+    "motion-plus": "^0.1.6",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-pageflip": "^2.0.3",
     "styled-components": "^6.1.17"
   },
   "devDependencies": {

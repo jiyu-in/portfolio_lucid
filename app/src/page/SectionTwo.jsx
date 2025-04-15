@@ -8,9 +8,10 @@ import clickSound from '../assets/click.wav';
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
 import Profile from "./Profile";
-
+import BgObject from '../component/BgObject';
 
 const Root = styled.div`
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -22,12 +23,24 @@ const Root = styled.div`
     @media (min-width: 2400px) {
         max-width: 1800px;
     }
+    @media (max-width: 960px) {
+        max-height: 100vh;
+        padding: 40px 80px;
+        gap:20px;
+    }
+    @media (max-width: 640px) {
+        min-width: 340px;
+    }
 `;
 const Nav = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
     gap:80px;
+    @media (max-width: 960px) {
+        gap:40px;
+    }
 `;
 const MenuStyled = styled.div`
     position: relative;
@@ -58,6 +71,18 @@ const MenuStyled = styled.div`
             box-shadow: inset 0px 6px 5px rgba(0, 0, 0, 0.25);
         }
     }
+    @media (max-width: 960px) {
+        width: 84px;
+        height: 84px;
+        & img{
+            width: 80%;
+            height: 80%;
+        }
+    }
+    @media (max-width: 640px) {
+        width: 56px;
+        height: 56px;
+    }
 `;
 const InnerBox = styled.div`
     width: 140px;
@@ -66,12 +91,17 @@ const InnerBox = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-image: linear-gradient(-45deg, #f0bc5b 0%, #ffd27e 100%);
+    background-image: linear-gradient(45deg, #B2EDDC 0%, #63E2BC 100%);
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    @media (max-width: 960px) {
+        width: 64px;
+        height: 64px;
+    }
 `;
 const InnerBox1 = styled(InnerBox)`
-    background-image: linear-gradient(45deg, #B2EDDC 0%, #63E2BC 100%);
+    background-image: linear-gradient(-45deg, #f0bc5b 0%, #ffd27e 100%);
+  
 `;
 const InnerBox2 = styled(InnerBox)`
     background-image: linear-gradient(45deg, #D1B8F9 0%, #8558CF 100%);
@@ -90,6 +120,15 @@ const NameTag = styled.div`
     border-radius: 50px;
     box-shadow: #ab6c35 0 4px 2px, rgba(0, 0, 0, 0.25) 0 4px 0px;
     z-index: 1;
+    @media (max-width: 960px) {
+        font-size:1.25rem;
+        padding:0.5rem 1rem;
+    }
+    @media (max-width: 640px) {
+        font-size:1rem;
+        padding:0.3rem 0.75rem;
+        border-radius: 24px;
+    }
 `;
 
 const Contents = styled(motion.div)`
@@ -101,8 +140,6 @@ const Contents = styled(motion.div)`
     box-shadow: #ab6c35 0 4px 2px, rgba(0, 0, 0, 0.25) 0 4px 0px;
     & p{
         word-break: keep-all;
-        font-size: 2.5rem;
-        font-weight: 600;
         color: #482B0E;
         margin: 0;
     }
@@ -115,6 +152,24 @@ const Contents = styled(motion.div)`
         height: calc(100% - 34px);
         border:2px dashed #ccc2b8;
         border-radius: 30px;
+    }
+    @media (max-width: 1240px) {
+        & p{
+            font-size:1.5rem;
+            max-height: 50vh;
+            overflow-y: auto;
+        }
+    }
+    @media (max-width: 640px) {
+        padding:0.75rem 1.5rem;
+        border-radius: 24px;
+        &::before{
+            left: 10px;
+            top: 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            border-radius: 20px;
+        }
     }
 `;
 
@@ -131,11 +186,11 @@ export default function SectionTwo() {
         const audio = new Audio(clickSound);
         audio.play();
     };
-    const [activeTab, setActiveTab] = useState("portfolio");
+    const [activeTab, setActiveTab] = useState("profile");
     const tabList = [
-        { key: "portfolio", label: "Portfolio", img: PhotoIcon, inner:<InnerBox/> },
+        // { key: "portfolio", label: "Portfolio", img: PhotoIcon, inner:<InnerBox/> },
+        { key: "profile", label: "Profile", img: SmileIcon, inner:<InnerBox2/>  },
         { key: "skills", label: "Skills", img: SkillsIcon , inner:<InnerBox1/> },
-        { key: "profile", label: "Profile", img: SmileIcon, inner:<InnerBox2/>  }
     ];
 
     const currentTab = tabList.find(tab => tab.key === activeTab);
@@ -144,10 +199,10 @@ export default function SectionTwo() {
         switch (activeTab) {
             case "portfolio":
                 return <Portfolio title={currentTab?.label} />;
-            case "skills":
-                return <Skills title={currentTab?.label} />;
             case "profile":
                 return <Profile title={currentTab?.label} />;
+            case "skills":
+                return <Skills title={currentTab?.label} />;
             default:
                 return null;
         }
@@ -155,6 +210,7 @@ export default function SectionTwo() {
 
     return (
         <Root>
+            <BgObject/>
             <Nav>
                 {tabList.map(tab => (
                     <MenuStyled 

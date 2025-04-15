@@ -1,6 +1,7 @@
 import styled  from 'styled-components';
 import './App.css'
 import ParallaxSection from './component/ParallaxSection'
+import BgObject from './component/BgObject'
 
 const Root = styled.div`
     position: relative;
@@ -30,22 +31,14 @@ const BgBox = styled.div`
       mask: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
     }
 `;
-const BgObject = styled.div`
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../src/assets/BackgroundImage.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-`;
+
 
 function App() {
   
   return (
     <Root>
       <BgBox/>
-      <BgObject/>
+      {/* <BgObject/> */}
       <ParallaxSection/>
     </Root>
   )

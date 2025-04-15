@@ -17,6 +17,10 @@ const Slogan = styled.div`
     justify-content: center;
     padding-left: 120px;
     padding-top:80px;
+    @media (max-width: 960px) {
+        padding-left: 80px;
+        padding-top:60px;
+    }
 `;
 
 const Txt = styled.p`
@@ -25,6 +29,9 @@ const Txt = styled.p`
     text-shadow: 0px 5px 0px #5E3235, -2px 0px #5E3235, 2px 0px #5E3235, 0px -2px #5E3235;
     margin: 0;
     line-height: 1.2;
+    @media (max-width: 960px) {
+        font-size: 3.375rem;
+    }
 `;
 
 const Txt1 = styled(Txt)`
@@ -44,6 +51,9 @@ const Desc = styled.p`
     @media (min-width: 1440px) {
         width: 40%;
     }
+    @media (max-width: 960px) {
+        font-size: 1rem;
+    }
 `;
 
 export default function SectionOne() {
@@ -59,6 +69,8 @@ export default function SectionOne() {
             height: '153px',
             bottom: '10%',
             left: '34%',
+            minBottom: '5%',
+            minLeft: '32%',
         },
         {
             src: BrowserIcon,
@@ -66,6 +78,8 @@ export default function SectionOne() {
             height: '474px',
             bottom: '-1%',
             right: '10%',
+            minBottom: '-0%',
+            minRight: '-20%',
         },
         {
             src: ImageCropIcon,
@@ -73,6 +87,8 @@ export default function SectionOne() {
             height: '172px',
             top: '10%',
             left: '52%',
+            minTop: '15%',
+            minLeft: '64%',
         },
         {
             src: CodeIcon,
@@ -80,6 +96,8 @@ export default function SectionOne() {
             height: '100px',
             top: '5%',
             left: '5%',
+            minTop: '15%',
+            minLeft: '10%',
         }
     ];
 
@@ -97,7 +115,7 @@ export default function SectionOne() {
                     <Desc>사용자 경험을 기획하고 디자인하며 퍼블리싱으로 웹 상에서 동적으로 보여지는 화면을 구현하며 새로운 컨텐츠를 만들어내는 일을 좋아합니다.
                     이제는 기술과 디자인을 결합한 창의적인 웹 애플리케이션을 만드는 데 더욱 집중하고 있습니다.</Desc>
                 </FadeText>
-                <Button text="Send Email" />
+                <Button text="Send Email" href="mailto:jyin2205@naver.com" />
             </Slogan>
         </div>
     );

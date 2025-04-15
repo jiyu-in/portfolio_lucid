@@ -7,8 +7,10 @@ import { useRef } from "react";
 import "./ParallaxSectionStyled.css"
 
 // ✅ 섹션 컴포넌트 import
-import SectionOne from "./SectionOne";
-import SectionTwo from "./SectionTwo";
+import SectionOne from "../page/SectionOne";
+import SectionPortfolio from "../page/SectionPortfolio";
+import SectionTwo from "../page/SectionTwo";
+import BgPortfolio from "./BgPortfolio";
 
 
 
@@ -35,6 +37,10 @@ export default function ParallaxSection() {
                 <SectionOne />
             </SectionWrapper>
             <SectionWrapper className="sectionTwo">
+                <BgPortfolio/>
+                <SectionPortfolio />
+            </SectionWrapper>
+            <SectionWrapper className="sectionThree">
                 <SectionTwo />
             </SectionWrapper>
         </>
