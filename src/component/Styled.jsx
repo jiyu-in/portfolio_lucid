@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import StarTinyIcon from '../assets/StarTinyIcon.png';
+import StarTinyIcon from '../../public/assets/StarTinyIcon.png';
 
 export const TitleBox = styled.div`
     display: flex;

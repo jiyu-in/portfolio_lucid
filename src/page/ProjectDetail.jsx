@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
-import CloseIcon  from '../assets/CloseIcon.png';
+import CloseIcon  from '../../public/assets/CloseIcon.png';
 import {ButtonStyled} from '../component/Styled';
-import clickSound from '../assets/click.wav';
+import clickSound from '../../public/assets/click.wav';
 import Dabang from '../page/projects/Dabang';
 import OnlineEduSystem from '../page/projects/OnlineEduSystem';
 import ProjectVoiceEntertainment from '../page/projects/ProjectVoiceEntertainment';

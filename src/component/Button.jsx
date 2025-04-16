@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import clickSound from '../assets/click.wav';
+import clickSound from '../../public/assets/click.wav';
 
 const StyledButton = styled.a`
     width: fit-content;

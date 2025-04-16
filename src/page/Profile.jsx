@@ -1,11 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
 import {TitleBox, ButtonStyled} from '../component/Styled';
-import CloseIcon  from '../assets/CloseIcon.png';
-import clickSound from '../assets/click.wav';
-import AvatarImage  from '../assets/AvatarImage.png';
-import NotionIcon  from '../assets/NotionIcon.png';
-import MailIcon  from '../assets/MailIcon.png';
+import CloseIcon  from '../../public/assets/CloseIcon.png';
+import clickSound from '../../public/assets/click.wav';
+import AvatarImage  from '../../public/assets/AvatarImage.png';
+import NotionIcon  from '../../public/assets/NotionIcon.png';
+import MailIcon  from '../../public/assets/MailIcon.png';
 
 const Section = styled.div`
     display: flex;

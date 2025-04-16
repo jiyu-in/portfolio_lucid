@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StarFillIcon  from '../assets/StarFillIcon.png';
-import StarLineIcon  from '../assets/StarLineIcon.png';
+import StarFillIcon  from '../../public/assets/StarFillIcon.png';
+import StarLineIcon  from '../../public/assets/StarLineIcon.png';
 import styled from 'styled-components';
 
 const StarStyled = styled.span`

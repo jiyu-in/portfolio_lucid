@@ -5,7 +5,7 @@ const BgObjectStyled = styled.div`
     position: absolute;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
-    background-image: url('../public/images/BackgroundImage.png');
+    background-image: url(${(props) => `${props.bgUrl}`});
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -15,8 +15,11 @@ const BgObjectStyled = styled.div`
 
 function BgObject() {
 
+    const BASE_URL = import.meta.env.VITE_PUBLIC_URL;
+    const bgImageUrl = `${BASE_URL}/images/BackgroundImage.png`;
+
     return (
-        <BgObjectStyled/>
+        <BgObjectStyled bgUrl={bgImageUrl}/>
     )
 }
 

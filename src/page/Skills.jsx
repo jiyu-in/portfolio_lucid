@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import {TitleBox, ButtonStyled} from '../component/Styled';
-import CloseIcon  from '../assets/CloseIcon.png';
+import CloseIcon  from '../../public/assets/CloseIcon.png';
 import LevelStars from "../component/LevelStars";
 
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {TitleBox, ButtonStyled} from '../component/Styled';
-import CloseIcon  from '../assets/CloseIcon.png';
-import clickSound from '../assets/click.wav';
+import CloseIcon  from '../../public/assets/CloseIcon.png';
+import clickSound from '../../public/assets/click.wav';
 
 
 

@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styled from 'styled-components';
-import SkillsIcon from '../assets/SkillsIcon.png';
-import PhotoIcon from '../assets/PhotoIcon.png';
-import SmileIcon from '../assets/SmileIcon.png';
-import clickSound from '../assets/click.wav';
+import SkillsIcon from '../../public/assets/SkillsIcon.png';
+import PhotoIcon from '../../public/assets/PhotoIcon.png';
+import SmileIcon from '../../public/assets/SmileIcon.png';
+import clickSound from '../../public/assets/click.wav';
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
 import Profile from "./Profile";

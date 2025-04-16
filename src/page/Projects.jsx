@@ -183,6 +183,7 @@ const skillIconMap = {
 
 function Projects({ title, date, skills, des, category, img, url, page, opacity, translateX, onClick }) {
 
+    const BASE_URL = import.meta.env.VITE_PUBLIC_URL;
 
     return (
     <Root 
@@ -208,7 +209,7 @@ function Projects({ title, date, skills, des, category, img, url, page, opacity,
                                     <SkillItem>
                                         {icon && (
                                         <img
-                                            src={`/skills/${icon}`}
+                                            src={`${BASE_URL}/skills/${icon}`}
                                             alt={skill}
                                         />
                                         )}

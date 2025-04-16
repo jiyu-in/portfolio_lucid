@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { projectData } from "../data/projectData";
 import Projects from "./Projects";
 import { motion, AnimatePresence } from "framer-motion";
-import clickSound from "../assets/click.wav";
-import ArrowLeftIcon from '../assets/ArrowLeftIcon.svg';
-import ArrowRightIcon from '../assets/ArrowRightIcon.svg';
+import clickSound from "../../public/assets/click.wav";
+import ArrowLeftIcon from '../../public/assets/ArrowLeftIcon.svg';
+import ArrowRightIcon from '../../public/assets/ArrowRightIcon.svg';
 import Drawer from "../component/Drawer";
 
 const Root = styled.div`
