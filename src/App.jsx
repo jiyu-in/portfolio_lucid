@@ -8,10 +8,11 @@ import ParallaxSection from './component/ParallaxSection';
 import Lms from './page/projects/OnlineEduSystem';
 
 
-
 function App() {
+  const BASE_URL = import.meta.evn.BASE_URL;
+  
   return (
-    <Router>
+    <Router basename={BASE_URL}>
         <Routes>
           <Route path="/" element={<ParallaxSection />} />
           <Route path="/lms" element={<Lms />} />
