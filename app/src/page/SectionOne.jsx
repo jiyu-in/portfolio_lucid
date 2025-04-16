@@ -11,16 +11,23 @@ import { useParallax } from "../hooks/useParallax";
 import { motion, useScroll } from "framer-motion";
 
 const Slogan = styled.div`
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 120px;
-    padding-top:80px;
-    @media (max-width: 960px) {
+    align-items: center;
+    /* padding-left: 120px;
+    padding-top:80px; */
+    box-sizing: border-box;
+    gap:30px;
+    & > div{
+        width: 80%;
+    }
+    /* @media (max-width: 960px) {
         padding-left: 80px;
         padding-top:60px;
-    }
+    } */
 `;
 
 const Txt = styled.p`
@@ -115,7 +122,7 @@ export default function SectionOne() {
                     <Desc>사용자 경험을 기획하고 디자인하며 퍼블리싱으로 웹 상에서 동적으로 보여지는 화면을 구현하며 새로운 컨텐츠를 만들어내는 일을 좋아합니다.
                     이제는 기술과 디자인을 결합한 창의적인 웹 애플리케이션을 만드는 데 더욱 집중하고 있습니다.</Desc>
                 </FadeText>
-                <Button text="Send Email" href="mailto:jyin2205@naver.com" />
+                <div><Button text="Send Email" href="mailto:jyin2205@naver.com" /></div>
             </Slogan>
         </div>
     );

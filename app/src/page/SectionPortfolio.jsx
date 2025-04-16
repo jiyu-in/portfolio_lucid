@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { TitleBox } from "../component/Styled";
 import styled from "styled-components";
-import data from "../data/data.json";
+import { projectData } from "../data/projectData";
 import Projects from "./Projects";
 import { motion, AnimatePresence } from "framer-motion";
 import clickSound from "../assets/click.wav";
 import ArrowLeftIcon from '../assets/ArrowLeftIcon.svg';
 import ArrowRightIcon from '../assets/ArrowRightIcon.svg';
+import Drawer from "../component/Drawer";
 
 const Root = styled.div`
   position: relative;
@@ -22,12 +23,19 @@ const SlideWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   @media (max-width: 960px) {
       min-width:360px;
       min-height:400px;
       width: fit-content;
       height: fit-content;
-    }
+  }
+  &:hover > div, &:focus > div{
+    box-shadow: #ab6c35 0 8px 2px,#ab6c35 4px 2px 5px;
+  }
+  &:active > div{
+    box-shadow: inset #ab6c35 0 4px 4px, inset rgba(0, 0, 0, 0.25) 0 4px 4px;
+  }
 `;
 
 const Slide = styled(motion.div)`
@@ -37,7 +45,8 @@ const Slide = styled(motion.div)`
   background-color: #fbf4df;
   border-radius: 36px;
   padding: 2.5rem 3rem;
-  box-shadow: #ab6c35 0 4px 2px, rgba(0, 0, 0, 0.25) 0 4px 0px;
+  border:3px solid #deceb0;
+  /* box-shadow: #ab6c35 0 4px 2px, rgba(0, 0, 0, 0.25) 0 4px 0px; */
   box-sizing: border-box;
   @media (max-width: 960px) {
     padding: 1rem 1.5rem;
@@ -82,15 +91,11 @@ const slideVariants = {
 };
 
 export default function SectionPortfolio() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState(projectData);
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(1);
   const [selected, setSelected] = useState(null);
-  
 
-  useEffect(() => {
-    setProjects(data);
-  }, []);
 
     useEffect(() => {
       if (selected) {
@@ -151,6 +156,8 @@ export default function SectionPortfolio() {
                 img={projects[page].img}
                 url={projects[page].url}
                 page={projects[page].page}
+                component={projects[page].componentName}
+                onClick={() => setSelected(projects[page])}
               />
             )}
           </Slide>

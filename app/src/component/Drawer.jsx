@@ -1,8 +1,8 @@
-// components/Drawer.jsx
 import React, { useRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import Projects from '../page/Projects';
+import ProjectDetail from '../page/ProjectDetail';
+import {ButtonStyled} from '../component/Styled';
 
 const Overlay = styled(motion.div)`
   position: fixed;
@@ -18,9 +18,10 @@ const Overlay = styled(motion.div)`
 const DrawerWrapper = styled(motion.div)`
   position: fixed;
   top: 50%;
-  width: 80%;
+  width: 50%;
   max-width: 960px;
   height: 80%;
+  min-height: fit-content;
   background: #fbf4df;
   border-radius: 24px;
   overflow-y: auto;
@@ -30,28 +31,28 @@ const DrawerWrapper = styled(motion.div)`
   z-index: 999;
 `;
 
-const CloseBtn = styled.button`
+const CloseBtn = styled(ButtonStyled)`
   position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  font-size: 2rem;
+  top: 42px;
+  right: 36px;
   cursor: pointer;
-  color: #333;
+  z-index: 999;
 `;
+
+
+
 
 export default function Drawer({ project, onClose }) {
     const wrapperRef = useRef(null);
     const [style, setStyle] = useState({});
-  
+
     useEffect(() => {
       const updatePosition = () => {
         if (wrapperRef.current) {
           const width = wrapperRef.current.offsetWidth;
           setStyle({
             left: `calc(50% - ${width / 2}px)`,
-            width: "80%",
+            width: "50%",
             maxWidth: "960px",
           });
         }
@@ -80,8 +81,7 @@ export default function Drawer({ project, onClose }) {
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <CloseBtn onClick={onClose}>×</CloseBtn>
-              <Projects {...project} />
+              <ProjectDetail {...project}  onClick={onClose} />
             </DrawerWrapper>
           </>
         )}

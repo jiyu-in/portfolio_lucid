@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import StarTinyIcon from '../assets/StarTinyIcon.png';
 
 export const TitleBox = styled.div`
     display: flex;
@@ -24,3 +25,19 @@ export const ButtonStyled = styled.button`
     padding: 0;
     margin: 0;
 `;
+
+
+export const TitleStyle = styled.h3`
+   color:#ab6c35;
+   background-image: url(${StarTinyIcon});
+   background-repeat:no-repeat;
+   background-position: left center;
+   padding-left: 22px;
+`;
+export const DescStyle = styled.p`
+   margin: 0;
+`;
+export const UlStyle = styled.ul`
+   
+`;
+

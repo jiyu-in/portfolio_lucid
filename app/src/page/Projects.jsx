@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion, useScroll, useTransform } from "framer-motion";
 import Tooltip from '../component/Tooltip';
 
+
 const Root = styled(motion.div)`
     position: relative;
     width: 100%;
@@ -23,13 +24,9 @@ const Root = styled(motion.div)`
         }
     }
 `;
-const BgImage = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-`;
+
 const Title = styled.div`
-    font-size:2.5rem;
+    font-size:2rem;
     font-weight: bold;
     margin:0.5rem 0 0.6rem;
     /* word-break: keep-all; */
@@ -37,7 +34,7 @@ const Title = styled.div`
     line-height: 1.2;
     text-shadow: 1px 1px 3px #aa8d8f;
     @media (max-width: 960px) {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 `;
 const BoxStyle = styled.div`
@@ -184,17 +181,14 @@ const skillIconMap = {
 };
 
 
-function Projects({ title, date, skills, des, category, img, url, page, opacity, translateX }) {
+function Projects({ title, date, skills, des, category, img, url, page, opacity, translateX, onClick }) {
 
-    // const handleClick = (url) => {
-    //     window.open(url, '_blank');
-    // };
-    
+
     return (
     <Root 
         style={{ opacity, translateX }}
         transition={{ type: "object", stiffness: 50, damping: 15 }}
-        // onClick={() => handleClick(url)}
+        onClick={onClick}
     >
         {/* <BgImage src={process.env.PUBLIC_URL + img} alt={title} /> */}
             <BoxStyle className="box">
@@ -226,10 +220,10 @@ function Projects({ title, date, skills, des, category, img, url, page, opacity,
                     </FlexBetween>
                     <Description>{des}</Description>
                 </InnerBoxStyle>
-                <LinkBox>
+                {/* <LinkBox>
                     <Link href={url}> 자세히 보기</Link>
                     {page && <LinkOutline href={page}> 사이트 보기</LinkOutline>}
-                </LinkBox>
+                </LinkBox> */}
             </BoxStyle>
         
     </Root>

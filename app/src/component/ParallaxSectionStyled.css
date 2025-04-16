@@ -3,14 +3,14 @@ html {
 }
 
 .img-container {
+    position: relative;
     height: 100vh;
     /* width: 100vw; */
     scroll-snap-align: start;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .img-container > div {
