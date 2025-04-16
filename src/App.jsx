@@ -9,7 +9,8 @@ import Lms from './page/projects/OnlineEduSystem';
 
 
 function App() {
-  const BASE_URL = import.meta.evn.BASE_URL;
+  const BASE_URL = import.meta.evn.VITE_PUBLIC_URL
+  ;
   
   return (
     <Router basename={BASE_URL}>
