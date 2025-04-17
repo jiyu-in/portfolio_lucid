@@ -15,7 +15,7 @@ const BgObjectStyled = styled.div`
 function BgPortfolio() {
     
     const BASE_URL = import.meta.env.VITE_PUBLIC_URL;
-    const bgImageUrl = `${BASE_URL}/images/BgSectionPortfolio.png`;
+    const bgImageUrl = `${BASE_URL}/assets/images/BgSectionPortfolio.png`;
 
     return (
         <BgObjectStyled bgUrl={bgImageUrl}/>

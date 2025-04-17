@@ -209,7 +209,7 @@ function Projects({ title, date, skills, des, category, img, url, page, opacity,
                                     <SkillItem>
                                         {icon && (
                                         <img
-                                            src={`${BASE_URL}/skills/${icon}`}
+                                            src={`${BASE_URL}/assets/skills/${icon}`}
                                             alt={skill}
                                         />
                                         )}
