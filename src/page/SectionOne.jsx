@@ -22,6 +22,11 @@ const Slogan = styled.div`
     & > div{
         width: 80%;
     }
+    @media (max-width: 640px) {
+        & > div{
+        width: 70%;
+    }
+    }
 `;
 
 const Txt = styled.p`
@@ -33,7 +38,7 @@ const Txt = styled.p`
     @media (max-width: 960px) {
         font-size: 3.375rem;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
         font-size: 2.25rem;
         text-shadow: 0px 3px 0px #5E3235, -2px 0px #5E3235, 2px 0px #5E3235, 0px -2px #5E3235;
     }
@@ -75,6 +80,8 @@ export default function SectionOne() {
             src: PaintIcon,
             width: '151px',
             height: '153px',
+            minWidth: '75px',
+            minHeight: '77px',
             bottom: '10%',
             left: '34%',
             minBottom: '5%',
@@ -84,6 +91,8 @@ export default function SectionOne() {
             src: BrowserIcon,
             width: '400px',
             height: '474px',
+            minWidth: '200px',
+            minHeight: '237px',
             bottom: '-1%',
             right: '10%',
             minBottom: '-0%',
@@ -93,6 +102,8 @@ export default function SectionOne() {
             src: ImageCropIcon,
             width: '225px',
             height: '172px',
+            minWidth: '112px',
+            minHeight: '86px',
             top: '10%',
             left: '52%',
             minTop: '15%',
@@ -102,6 +113,8 @@ export default function SectionOne() {
             src: CodeIcon,
             width: '101px',
             height: '100px',
+            minWidth: '51px',
+            minHeight: '51px',
             top: '5%',
             left: '5%',
             minTop: '15%',

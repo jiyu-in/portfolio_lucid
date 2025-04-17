@@ -54,6 +54,9 @@ const Slide = styled(motion.div)`
   @media (max-width: 960px) {
     padding: 1rem 1.5rem;
     }
+    @media (max-width: 640px) {
+    padding: 0.75rem 1rem;
+    }
 `;
 
 const Controller = styled.div`

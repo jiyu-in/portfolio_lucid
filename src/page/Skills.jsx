@@ -32,7 +32,7 @@ const Item = styled.div`
     }
     @media (max-width: 560px) {
         font-size: 1rem;
-        padding: 1rem 1rem;
+        padding: 0.75rem 1rem;
     }
 `;
 

@@ -37,6 +37,10 @@ const ImageWrapper = styled.div`
     bottom: ${({ minBottom }) => minBottom || 'auto'};
       z-index: -1;
   }
+  @media (max-width: 640px) {
+    width: ${({ minWidth }) => minWidth || 'fit-content'};
+      height: ${({ minHeight }) => minHeight || 'fit-content'};
+  }
 `;
 
 const StyledImage = styled.img`

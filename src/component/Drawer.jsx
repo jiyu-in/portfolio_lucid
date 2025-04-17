@@ -29,6 +29,10 @@ const DrawerWrapper = styled(motion.div)`
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0 10px 30px;
   z-index: 999;
+  @media (max-width: 640px) {
+    padding: 1rem;
+    width: 65%;
+  }
 `;
 
 const CloseBtn = styled(ButtonStyled)`
@@ -52,8 +56,6 @@ export default function Drawer({ project, onClose }) {
           const width = wrapperRef.current.offsetWidth;
           setStyle({
             left: `calc(50% - ${width / 2}px)`,
-            width: "50%",
-            maxWidth: "960px",
           });
         }
       };

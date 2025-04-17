@@ -170,6 +170,7 @@ const Contents = styled(motion.div)`
     }
     @media (max-width: 640px) {
         width: 80%;
+        min-height: fit-content;
         padding:0.75rem 1.5rem;
         border-radius: 24px;
         &::before{
