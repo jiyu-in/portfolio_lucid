@@ -27,10 +27,12 @@ const BgBox = styled.div`
         linear-gradient(to bottom, rgba(255, 255, 255, 0.33) 1px, transparent 1px);
         mask: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
     }
-    /* @media (max-width: 480px) {
-        min-width: 100vw;
-        min-height: 100vh;
-    } */
+    @media (max-width: 640px) {
+      left: 16px;
+      top: 16px;
+      width: calc(100vw - 32px);
+      height: calc(100vh - 32px);
+    }
 `;
 
 
