@@ -17,17 +17,11 @@ const Slogan = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-left: 120px;
-    padding-top:80px; */
     box-sizing: border-box;
     gap:30px;
     & > div{
         width: 80%;
     }
-    /* @media (max-width: 960px) {
-        padding-left: 80px;
-        padding-top:60px;
-    } */
 `;
 
 const Txt = styled.p`
@@ -38,6 +32,10 @@ const Txt = styled.p`
     line-height: 1.2;
     @media (max-width: 960px) {
         font-size: 3.375rem;
+    }
+    @media (max-width: 600px) {
+        font-size: 2.25rem;
+        text-shadow: 0px 3px 0px #5E3235, -2px 0px #5E3235, 2px 0px #5E3235, 0px -2px #5E3235;
     }
 `;
 
@@ -61,12 +59,15 @@ const Desc = styled.p`
     @media (max-width: 960px) {
         font-size: 1rem;
     }
+    @media (max-width: 600px) {
+        font-size: 0.875rem;
+    }
 `;
 
 export default function SectionOne() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
-    const y = useParallax(scrollYProgress, 100);
+    const y = useParallax(scrollYProgress, 80);
     const opacity = useParallax(scrollYProgress, [0, 0.5, 1], [1, 1, 0]);
 
     const images = [
