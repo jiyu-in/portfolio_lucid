@@ -16,18 +16,21 @@ const Section = styled.div`
         font-weight: 500;
     }
     @media (max-width: 960px) {
-        flex-direction: column;
         gap:20px;
         padding: 0;
         & p{
-            font-size: 1.125rem;
-            height: 3rem;
-            overflow-y: auto;
+            font-size: 1.125rem!important;
         }
     }
     @media (max-width: 560px) {
+        flex-direction: column;
+        gap:10px;
         & p{
-            font-size: 1rem;
+            font-size: 1rem!important;
+            height: 5rem;
+            overflow-y: auto;
+            padding:8px 0;
+            margin-bottom:10px;
         }
     }
 `;
@@ -36,22 +39,22 @@ const ImageBox = styled.div`
     padding: 30px;
     border-radius: 36px;
     overflow: hidden;
-    min-width: 120px;
-    height: 120px;
+    min-width: 140px;
+    height: 140px;
     background-color: #f0bc5c;
     box-shadow: 1px -6px 6px #C68751 inset, 0px 4px 4px #E6B987 inset, 1px 4px 9px #E6B987, 0px -3px 5px #E6B987;
-    border: 12px solid #fff;
+    border: 8px solid #fff;
     & img{
-        width: 100%;
-        height: 200px;
+        width: 120px;
+        height: 160px;
         object-fit: contain;
         margin-top: -20px;
         margin-left: 10px;
     }
     @media (max-width: 960px) {
         flex-direction: column;
-        min-width: 120px;
-        height: 120px;
+        min-width: 160px;
+        height: 160px;
         & img{
             height: 240px;
         }
@@ -93,9 +96,12 @@ const LinkBox = styled.div`
     }
     @media (max-width: 960px) {
         & a{
-        width: 48px;
-        height: 48px;
+            width: 48px;
+            height: 48px;
         }
+    }
+    @media (max-width: 560px) {
+        padding: 20px 0 12px;
     }
 `;
 

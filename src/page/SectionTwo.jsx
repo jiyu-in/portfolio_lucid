@@ -26,10 +26,12 @@ const Root = styled.div`
     @media (max-width: 960px) {
         max-height: 100vh;
         padding: 40px 80px;
-        gap:20px;
+        gap:32px;
     }
     @media (max-width: 640px) {
+        flex-direction: column;
         min-width: 340px;
+        padding: 20px;
     }
 `;
 const Nav = styled.div`
@@ -40,6 +42,9 @@ const Nav = styled.div`
     gap:80px;
     @media (max-width: 960px) {
         gap:40px;
+    }
+    @media (max-width: 640px) {
+        flex-direction: row;
     }
 `;
 const MenuStyled = styled.div`
@@ -133,11 +138,14 @@ const NameTag = styled.div`
 
 const Contents = styled(motion.div)`
     position: relative;
-    width: fit-content;
+    min-width: min-content;
+    min-height: -webkit-fill-available;
     background-color: #fbf4df;
     border-radius: 36px;
     padding:2.5rem 3rem;
+    margin: 0 auto;
     box-shadow: #ab6c35 0 4px 2px, rgba(0, 0, 0, 0.25) 0 4px 0px;
+    overflow: hidden;
     & p{
         word-break: keep-all;
         color: #482B0E;
@@ -161,6 +169,7 @@ const Contents = styled(motion.div)`
         }
     }
     @media (max-width: 640px) {
+        width: 80%;
         padding:0.75rem 1.5rem;
         border-radius: 24px;
         &::before{

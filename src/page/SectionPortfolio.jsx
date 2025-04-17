@@ -30,6 +30,9 @@ const SlideWrapper = styled.div`
       width: fit-content;
       height: fit-content;
   }
+  @media (max-width: 480px) {
+      min-width: 85vw;
+  }
   &:hover > div, &:focus > div{
     box-shadow: #ab6c35 0 8px 2px,#ab6c35 4px 2px 5px;
   }
@@ -69,10 +72,16 @@ const Button = styled.button`
 
 const PrevButton = styled(Button)`
   left:-80px;
+      @media (max-width: 560px) {
+        left:-20px;
+    }
 `;
 
 const NextButton = styled(Button)`
   right:-80px;
+  @media (max-width: 560px) {
+    right:-20px;
+    }
 `;
 
 const slideVariants = {

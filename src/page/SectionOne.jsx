@@ -119,7 +119,7 @@ export default function SectionOne() {
                     <Txt1>경험을 코드로 엮어</Txt1>
                     <Txt2>새로운 컨텐츠를</Txt2>
                 </motion.div>
-                <FadeText $visible={true} style={{ y, opacity}}>
+                <FadeText style={{ y, opacity}}>
                     <Desc>사용자 경험을 기획하고 디자인하며 퍼블리싱으로 웹 상에서 동적으로 보여지는 화면을 구현하며 새로운 컨텐츠를 만들어내는 일을 좋아합니다.
                     이제는 기술과 디자인을 결합한 창의적인 웹 애플리케이션을 만드는 데 더욱 집중하고 있습니다.</Desc>
                 </FadeText>
