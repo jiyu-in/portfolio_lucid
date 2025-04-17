@@ -20,7 +20,7 @@ const DrawerWrapper = styled(motion.div)`
   top: 50%;
   width: 50%;
   max-width: 960px;
-  height: 80%;
+  height: -webkit-fill-available;
   min-height: fit-content;
   background: #fbf4df;
   border-radius: 24px;

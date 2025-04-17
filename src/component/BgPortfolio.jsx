@@ -3,8 +3,8 @@ import styled  from 'styled-components';
 
 const BgObjectStyled = styled.div`
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-image: url(${(props) => `${props.bgUrl}`});
     background-repeat: no-repeat;
     background-position: center bottom;

@@ -56,22 +56,23 @@ const Title = styled.div`
     }
 `;
 const BoxStyle = styled.div`
-    display: flex;
-    flex-direction: column;
     position: absolute;
     left:0;
     top:0;
     width: 100%;
     height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:24px;
 `;
 
 const InnerBoxStyle = styled.div`
-    height:100%;
-    max-height: 80%;
+    min-height: 4rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     padding: 24px;
-    margin: 24px 0;
     border-radius: 24px;
     background-color: #ffd6b2;
     box-shadow:inset 0px 3px 6px rgba(0, 0, 0, 0.25), inset 3px 0px 6px rgba(0, 0, 0, 0.25);
