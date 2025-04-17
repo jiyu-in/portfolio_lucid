@@ -3,7 +3,7 @@ import {TitleStyle, DescStyle, UlStyle} from '../../component/Styled';
 
 function ProjectKoreaBroadcastArts() {
     return (
-        <>
+        <div>
             <DescStyle>한국방송예술진흥원의 메인 페이지 및 학과 페이지 리디자인 작업을 진행하였습니다. 웹 표준을 준수하며 사용자가 더 직관적으로 이용할 수 있도록 레이아웃과 내비게이션을 개선했습니다.
             </DescStyle>
             <TitleStyle>역할과 기여도</TitleStyle>
@@ -15,7 +15,7 @@ function ProjectKoreaBroadcastArts() {
             <li>학교 주관 오디션 및 행사 포스터 디자인, 배너 및 프로모션 이미지 제작까지 함께 진행하였습니다.
             </li>
             </UlStyle>
-        </>
+        </div>
     );
 }
 export default ProjectKoreaBroadcastArts;

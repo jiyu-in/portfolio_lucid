@@ -120,10 +120,10 @@ const SkillItem = styled.div`
         height: 100%;
         object-fit: contain;
     }
-    @media (max-width: 960px) {
+    /* @media (max-width: 960px) {
         width: 16px;
         height: 16px;
-    }
+    } */
 `;
 
 
