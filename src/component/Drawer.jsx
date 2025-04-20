@@ -31,7 +31,7 @@ const DrawerWrapper = styled(motion.div)`
   z-index: 999;
   @media (max-width: 640px) {
     padding: 1rem;
-    width: 65%;
+    width: 80%;
   }
 `;
 
